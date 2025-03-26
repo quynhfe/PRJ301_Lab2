@@ -7,67 +7,35 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Edit Student</title>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                background-color: #e9ecef;
-                text-align: center;
-            }
-            form {
-                width: 50%;
-                margin: auto;
-                background: white;
-                padding: 20px;
-                border-radius: 8px;
-                box-shadow: 0px 0px 10px #aaa;
-            }
-            label {
-                display: block;
-                margin: 10px 0 5px;
-                font-weight: bold;
-            }
-            input, select {
-                width: 100%;
-                padding: 8px;
-                margin-bottom: 15px;
-                border: 1px solid #ddd;
-                border-radius: 5px;
-            }
-            input[type="submit"] {
-                background-color: #ffc107;
-                color: black;
-                cursor: pointer;
-                border: none;
-                padding: 10px;
-            }
-            input[type="submit"]:hover {
-                background-color: #e0a800;
-            }
-        </style>
-    </head>
-    <body>
-        <h2>Edit Student</h2>
-        <form action="editStudentServlet" method="post">
-            <input type="hidden" name="id" value="${student.getId()}">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Edit Student</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+</head>
+<body class="bg-gray-100 text-center font-sans">
+    <h2 class="text-3xl font-bold text-green-600 my-8">Edit Student</h2>
+    <form action="editStudentServlet" method="post" class="w-full max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg">
+        <input type="hidden" name="id" value="${student.getId()}">
 
-            <label>Name:</label>
-            <input type="text" name="name" value="${student.getName()}" required>
+        <label class="block text-left text-gray-700 font-bold mb-2">Name:</label>
+        <input type="text" name="name" value="${student.getName()}" required class="w-full p-2 mb-4 border border-gray-300 rounded">
 
-            <label>Gender:</label>
-            <select name="gender">
-                <option value="Male" ${student.getGender().equals("Male") ? "selected" : "" }>Male</option>
-                <option value="Female" ${student.getGender().equals("Female") ? "selected" : ""}>Female</option>
-            </select>
+        <label class="block text-left text-gray-700 font-bold mb-2">Gender:</label>
+        <select name="gender" class="w-full p-2 mb-4 border border-gray-300 rounded">
+            <option value="Male" ${student.getGender().equals("Male") ? "selected" : "" }>Male</option>
+            <option value="Female" ${student.getGender().equals("Female") ? "selected" : ""}>Female</option>
+        </select>
 
-            <label>DOB:</label>
-            <input type="date" name="dob" value="${student.getDob()}" required>
+        <label class="block text-left text-gray-700 font-bold mb-2">DOB:</label>
+        <input type="date" name="dob" value="${student.getDob()}" required class="w-full p-2 mb-4 border border-gray-300 rounded">
 
-            <input type="submit" value="Update Student">
-        </form>
-        <br>
-        <a href="studentList.jsp"><button>Back to Student List</button></a>
-    </body>
+        <input type="submit" value="Update Student" class="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700 cursor-pointer">
+    </form>
+    <div class="mt-8">
+        <a href="studentList.jsp">
+            <button class="bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700">Back to Student List</button>
+        </a>
+    </div>
+</body>
 </html>

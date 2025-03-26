@@ -19,9 +19,6 @@ public class Constant {
     public static final String STUDENT_UPDATE
             = "UPDATE Students SET name = ?, Gender = ?, DOB =? WHERE ID = ?";
 
-//    public static final String PROC_ADDStudent = "{ call addCustomer(?)}";
-//
-//    public static final String PROC_DELETEStudent = "{ call deleteCustomer(?)}";
-//
-//    public static final String PROC_UPDATEStudent = "{ call updateCustomer(?,?)}";
+    public static final String USER_GET_ALL = "select *from users;";
+    public static final String USER_ADD = "INSERT INTO users (username, password) VALUES   (?, ?);";
 }

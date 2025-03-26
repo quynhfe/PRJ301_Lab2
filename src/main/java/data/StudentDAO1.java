@@ -104,55 +104,7 @@ public class StudentDAO1 {
         return check;
     }
 
-//	public boolean procAddStudent(Student c) {
-//		boolean check = false;
-//		try (CallableStatement ps = DBContext
-//				.getConnection()
-//				.prepareCall(Constant.PROC_ADDStudent)) {
-//			ps.setNString(1,c.getName());
-//			int result = ps.executeUpdate();
-//			if(result > 0) {
-//				check = true;
-//			}
-//		} catch (Exception e) {
-//			System.out.println("Error Student DAO procAddStudent");
-//			e.printStackTrace();
-//		}
-//		return check;
-//	}
-//	public boolean procDeleteStudent(int StudentId) {
-//		boolean check = false;
-//		try (CallableStatement ps = DBContext
-//				.getConnection()
-//				.prepareCall(Constant.PROC_DELETEStudent)) {
-//			ps.setInt(1,StudentId);
-//			int result = ps.executeUpdate();
-//			if(result > 0) {
-//				check = true;
-//			}
-//		} catch (Exception e) {
-//			System.out.println("Error Student DAO proc delete Student");
-//			e.printStackTrace();
-//		}
-//		return check;
-//	}
-//	public boolean procUpdateStudent(Student c) {
-//		boolean check = false;
-//		try (CallableStatement ps = DBContext
-//				.getConnection()
-//				.prepareCall(Constant.PROC_UPDATEStudent)) {
-//			ps.setInt(1,c.getId());
-//			ps.setNString(2,c.getName());
-//			int result = ps.executeUpdate();
-//			if(result > 0) {
-//				check = true;
-//			}
-//		} catch (Exception e) {
-//			System.out.println("Error Student DAO proc update Student");
-//			e.printStackTrace();
-//		}
-//		return check;
-//	}
+
     public static void main(String[] args) {
         StudentDAO1 cd = new StudentDAO1();
         ArrayList<Student> students = new ArrayList<Student>();

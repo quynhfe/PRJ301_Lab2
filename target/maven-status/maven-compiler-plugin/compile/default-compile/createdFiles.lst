@@ -1,12 +1,15 @@
 controller\EditStudentServlet.class
+controller\LoginServlet.class
+data\UserDB.class
 com\mycompany\studentmanagement\resources\JakartaEE10Resource.class
 controller\GetStudentListServlet.class
-data\ConnectionPool.class
 data\StudentDAO1.class
 data\DBContext.class
 model\Student.class
 controller\DeleteStudentServlet.class
-data\DBUtils.class
+controller\LogoutServlet.class
 common\Constant.class
 controller\AddStudentServlet.class
+controller\RegisterServlet.class
 com\mycompany\studentmanagement\JakartaRestConfiguration.class
+model\User.class
